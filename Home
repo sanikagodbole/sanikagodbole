@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanika Godbole | 3D Modeler & Technical Artist</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sanika Godbole</h1>
+    <p>3D Modeler & Technical Artist</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a student at SCAD specializing in 3D environment modeling and technical animation.
+        I love combining art and technology to create immersive experiences.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Newton’s Cradle in Maya:</strong> A Python-driven dynamic animation with procedural shading.</li>
+        <li><strong>Forest Scene in Unreal Engine:</strong> Real-time rendered environment with lake and foliage.</li>
+        <li><strong>V-Ray to KeyShot Converter:</strong> Python script for batch material translation using JSON data.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:sanikavgodbole@gmail.com">sanikavgodbole@gmail.com</a></p>
+      <p><a href="https://sanikagodbole.wixsite.com/home" target="_blank">Wix Portfolio</a></p>
+      <p><a href="https://linkedin.com/in/sanikavgodbole" target="_blank">LinkedIn</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sanika Godbole</p>
+  </footer>
+</body>
+</html>
