@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-color: #2a2b2d; /*can replace with image*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family:  'Oswald', serif;
+}
+nav{
+    background-color: #2a2b2d;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #b0ddd4;
+}
+nav a:hover{
+    color: #e65010ef;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #3d3e41;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+@media(max-width: 600px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(min-width: 601px){
+    .sidebar{
+        display:none;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+
+
+
+h1{
+    text-align: center;
+    color: #b0ddd4;
+    font-family: 'Oswald', serif;
+    font-size: 60px;
+    padding-top: 80px;
+    margin-bottom: 0;
+}
+h2{
+    text-align: center;
+    color: #b0ddd4;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-bottom: 0;
+
+}
+.vimeo {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    max-width: 80%;
+    margin: -0.5rem auto 2rem auto;
+
+}
+
+.vimeo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* .title { 
+    text-align: center;
+    color: #8fc6de;
+    background-color: #2a2b2d;
+    font-family: 'Oswald', serif;
+    font-size: 60px;
+}
+
+
+
+.tabs { 
+    color: #8fc6de;
+    background-color: #2a2b2d;
+    font-family: 'Oswald', serif;
+    font-size: 30px;
+    font-weight: 100px;
+}
+
+button {
+    height: 30px;
+    width: 100px;
+    padding: 10px;
+    border: 2px solid red;
+    margin: 10px;
+}
+
+.centered-div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
