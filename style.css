@@ -155,11 +155,11 @@ p{
 
 .vimeo {
     position: relative;
+    padding-bottom: 55%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
-    max-width: 75%;
+    max-width: 80%;
     margin: -1rem auto;
-    padding: 2rem; /* space around the image */
 }
 
 .vimeo iframe {
@@ -171,6 +171,7 @@ p{
     border: none;
     border-radius: 0px;
 }
+
 
 .youtube {
     display: flex;
