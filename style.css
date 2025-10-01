@@ -40,6 +40,10 @@ nav a{
     align-items: center;
     color: #b0ddd4;
 }
+nav li:first-child{
+    margin-right: auto;
+}
+
 nav a:hover{
     color: #e65010ef;
 }
@@ -200,7 +204,7 @@ p{
     border-radius: 2px;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
-    margin: 0 20px;
+    margin: 20px 20px;
 
 }
 
