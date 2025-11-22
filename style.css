@@ -7,14 +7,14 @@
 }
 body{
     min-height: 100vh;
-    background-color: #2a2b2d; /*can replace with image*/
+    background-color: #2a2d2a; /*can replace with image*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     font-family:  'Oswald', serif;
 }
 nav{
-    background-color: #2a2b2d;
+    background-color: #2a2d2a;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -38,7 +38,7 @@ nav a{
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: #b0ddd4;
+    color: #bacaa1;
 }
 nav li:first-child{
     margin-right: auto;
@@ -54,7 +54,7 @@ nav a:hover{
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: #3d3e41;
+    background-color: #2a2d2a;
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
@@ -92,7 +92,7 @@ nav a:hover{
 
 .centered-div {
     text-align: center;
-    color: #b0ddd4;
+    color: #bacaa1;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: lighter;
     font-size: 20px;
@@ -102,7 +102,7 @@ nav a:hover{
 
 h1{
     text-align: center;
-    color: #b0ddd4;
+    color: #bacaa1;
     font-family: 'Oswald', serif;
     font-size: 60px;
     padding-top:70px;
@@ -116,7 +116,7 @@ h1{
 
 h2{
     text-align: center;
-    color: #b0ddd4;
+    color: #bacaa1;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: lighter;
     font-size: 20px;
@@ -131,7 +131,7 @@ h2{
 
 h3{
   text-align: left;
-  color: #b0ddd4;
+  color: #bacaa1;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: lighter;
   font-size: 24px;
@@ -145,7 +145,7 @@ h3{
 
 p{
   text-align: left;
-  color: #b0ddd4;
+  color: #bacaa1;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: lighter;
   font-size: 18px;
@@ -164,6 +164,7 @@ p{
     overflow: hidden;
     max-width: 80%;
     margin: -1rem auto;
+    border-radius: 10px;
 }
 
 .vimeo iframe {
@@ -172,8 +173,7 @@ p{
     left: 0;
     width: 100%;
     height: 100%;
-    border: none;
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 
@@ -186,7 +186,11 @@ p{
 .youtube iframe {
     aspect-ratio: 16 / 9;
     width: 75% !important;
+    border-radius: 10px;
 }
+
+
+
 
 
 .home-btn {
@@ -195,13 +199,13 @@ p{
     align-items: center;
     width: 150px;
     height: 50px;
-    background-color: #b0ddd4;
+    background-color: #bacaa1;
     color: #2a2b2d;
     font-family: 'Oswald', serif;
     font-weight: normal;
     font-size: 20px;
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 10px;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     margin: 20px 20px;
@@ -215,9 +219,15 @@ p{
     box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
 }
 
+
+
+
+
+
+
 .project-btn {
-    width: 500px;
-    height: 300px;
+    width: 512px;
+    height: 288px;
     display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -227,19 +237,90 @@ p{
     color: rgba(0,0,0,0);
     font-family: 'Oswald', serif;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 60px;
     text-decoration: none;
-    border-radius: 0px;
+    border-radius: 10px;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
+    
     margin: 10px;
+    background-size: 100% auto;
+
 }
-/* 
+
 .project-btn:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
-} */
+    color: rgb(255, 255, 255);
+}
+
+
+.vineGrowth {
+    background-image: url("./images/vineGrowth/Procedural_Vine_Growth_Final_00245.png");
+}
+.vineGrowth:hover {
+    background-image: url("./images/vineGrowth/vines_full_dark.jpg");
+}
+
+
+.divinationHome {
+  background-image: url("./images/divinationHome/Home_Model_v3.0120.png");
+}
+.divinationHome:hover {
+    background-image: url("./images/divinationHome/divination_dark.jpg");
+}
+
+
+.tropicalEscape {
+  background-image: url("./images/tropicalEscape/FishSequence.0000.jpeg");
+}
+.tropicalEscape:hover {
+  background-image: url("./images/tropicalEscape/tropicalescape_dark.jpg");
+}
+
+
+.oshkosh {
+  background-image: url("./images/oshkoshScripts/oshkosh_material.jpg");
+}
+.oshkosh:hover {
+  background-image: url("./images/oshkoshScripts/oshkosh_dark.jpg");
+}
+
+
+.empireOfLight {
+  background-image: url("./images/empireOfLight/VSFX316_MoodMatch_Bouquet_v02MoodChange1_0001.png");
+  background-size: 130% 100%;
+
+}
+.empireOfLight:hover {
+  background-image: url("./images/empireOfLight/VSFX316_MoodMatch_Export_v1.png");
+  background-size: 130% 100%;
+}
+
+.proceduralBuildings {
+  background-image: url("./images/proceduralBuildings/comp5.png");
+  background-size: 130% 100%;
+
+}
+.proceduralBuildings:hover {
+  background-image: url("./images/proceduralBuildings/proceduralbulding_dark.jpg");
+  background-size: 130% 100%;
+}
+
+.VEXdrink {
+  background-image: url("./images/VEXdrink/SAV_Fall2025_VFX_SanikaGodbole_Steele_Project5a_FINAL_WITH_EDITS.png");
+
+}
+.VEXdrink:hover {
+  background-image: url("./images/VEXdrink/vexdrink_dark.jpg");
+}
+
+.jblPlug {
+    background-image: url("./images/jblPlug/W25_V316_P2_GodboleSanika_Render.png");
+    background-size: 105% 105%;
+}
+.jblPlug:hover {
+    background-image: url("./images/jblPlug/jbl_dark.jpg");
+    background-size: 105% 105%;
+}
 
 .process-btn {
     display: inline-flex;
@@ -288,6 +369,8 @@ p{
     border: none;
     border-radius: 0px;
 }
+
+
 
 .fineArt {
     margin-top: 30px;
