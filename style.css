@@ -336,6 +336,18 @@ h4{
     background-size: 105% 105%;
 }
 
+
+.jade {
+    background-image: url("./images/jade/stoneLionsPOC.png");
+    background-size: 105% 105%;
+}
+.jade:hover {
+    background-image: url("./images/jade/stoneLionsPOC_dark.jpg");
+    background-size: 105% 105%;
+}
+
+
+
 .process-btn {
     display: inline-flex;
     justify-content: center;
