@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanika Godbole</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#b0ddd4"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="./index.html">SANIKA GODBOLE</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./fineart.html">Fine Art</a></li>
+            <li><a href="./process.html">Process</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+        <ul>
+            <li><a href="./index.html">SANIKA GODBOLE</a></li>
+            <li class="hideOnMobile"><a href="./index.html">HOME</a></li>
+            <li class="hideOnMobile"><a href="./portfolio.html">PORTFOLIO</a></li>
+            <li class="hideOnMobile"><a href="./fineart.html">FINE ART</a></li>
+            <li class="hideOnMobile"><a href="./process.html">PROCESS</a></li>
+            <li class="hideOnMobile"><a href="./about.html">ABOUT</a></li>
+            <li class="menu-button" onclick=showSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#b0ddd4"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <script> 
+        function showSideBar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSideBar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+
+    <h1>VEX Procedural Shaders </h1>
+        <div>
+            <div class = "centered-div">
+                <h2>Created in Houdini 20.5.278<br>
+                    Rendered with Karma</h2>
+                <div class = "youtube">
+                    <iframe src="https://www.youtube.com/embed/n0gngCPp-yQ" title="Procedural Vine Growth - Sanika Godbole" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class = "image">
+                    <img src="./images/VEXdrink/SAV_Fall2025_VFX_SanikaGodbole_Steele_Project5a_FINAL_WITH_EDITS.png" alt="drink">
+                </div>
+             </div>
+        </div>
