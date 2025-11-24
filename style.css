@@ -47,6 +47,15 @@ nav li:first-child{
 nav a:hover{
     color: #e65010ef;
 }
+/* Ensure any SVGs inside the sidebar use the same link color */
+.sidebar svg {
+    fill: #bacaa1;
+}
+
+/* If you want the SVG to change on hover like the link text, uncomment the rule below */
+.sidebar a:hover svg {
+    fill: #e65010ef;
+}
 .sidebar{
     position: fixed;
     top: 0;
@@ -151,7 +160,7 @@ h3{
 }
 
 p{
-  text-align: left;
+  text-align: center;
   color: #bacaa1;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: lighter;
@@ -188,6 +197,13 @@ h4{
     border-radius: 10px;
 }
 
+@media (max-width: 600px){
+    .vimeo{
+        padding: 20%;
+        max-width: 100%;
+    }
+}
+
 .vimeo iframe {
     position: absolute;
     top: 0;
@@ -210,7 +226,12 @@ h4{
     border-radius: 10px;
 }
 
-
+@media (max-width: 1000px){
+    .youtube iframe{
+        width: 90% !important;
+        max-width: 100%;
+    }
+}
 
 
 .home-btn {
@@ -246,8 +267,8 @@ h4{
 
 
 .project-btn {
-    width: 448px;
-    height: 252px;
+    width: 480px;
+    height: 270px;
     display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -266,6 +287,13 @@ h4{
     margin: 10px;
     background-size: 100% auto;
 
+}
+
+@media (max-width: 600px){
+    .project-btn{
+        width: 400px;
+        height: 225px;
+    }
 }
 
 .project-btn:hover {
@@ -399,7 +427,7 @@ h4{
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 
@@ -412,6 +440,21 @@ h4{
 }
 
 .fineArt img {
+    width: auto;
+    height: 400px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.photography {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photography img {
     width: auto;
     height: 300px;
     margin: 10px;
