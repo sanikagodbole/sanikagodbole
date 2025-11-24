@@ -100,6 +100,13 @@ nav a:hover{
     padding-bottom: 10%; 
 }
 
+.spacer { display:block; width:100%; height:2rem; }     /* default vertical spacer */
+.spacer-sm { height:.5rem; }
+.spacer-md { height:1rem; }
+.spacer-lg { height:2rem; }
+.spacer-xl { height:4rem; }
+
+
 h1{
     text-align: center;
     color: #bacaa1;
@@ -173,11 +180,11 @@ h4{
 
 .vimeo {
     position: relative;
-    padding-bottom: 55%; /* 16:9 aspect ratio */
+    padding: 15%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
-    max-width: 80%;
-    margin: -1rem auto;
+    max-width: 60%;
+    margin: auto;
     border-radius: 10px;
 }
 
@@ -199,10 +206,9 @@ h4{
 
 .youtube iframe {
     aspect-ratio: 16 / 9;
-    width: 75% !important;
+    width: 50% !important;
     border-radius: 10px;
 }
-
 
 
 
@@ -240,8 +246,8 @@ h4{
 
 
 .project-btn {
-    width: 512px;
-    height: 288px;
+    width: 448px;
+    height: 252px;
     display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -354,13 +360,13 @@ h4{
     align-items: center;
     width: 300px;
     height: 50px;
-    background-color: #b0ddd4;
+    background-color: #bacaa1;
     color: #2a2b2d;
     font-family: 'Oswald', serif;
     font-weight: normal;
     font-size: 20px;
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 10px;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     margin: 20px;
