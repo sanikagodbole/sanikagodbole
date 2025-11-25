@@ -116,7 +116,7 @@ nav a:hover{
 .spacer-xl { height:4rem; }
 
 
-h1{
+h1{ /*title*/
     text-align: center;
     color: #bacaa1;
     font-family: 'Oswald', serif;
@@ -130,7 +130,7 @@ h1{
     }
 }
 
-h2{
+h2{ /*subtitle*/
     text-align: center;
     color: #bacaa1;
     font-family: 'Nunito Sans', sans-serif;
@@ -145,21 +145,21 @@ h2{
 }
 
 
-h3{
-  text-align: left;
+h3{ /*header*/
+  text-align: center;
   color: #bacaa1;
   font-family: 'Nunito Sans', sans-serif;
-  font-weight: lighter;
+  font-weight: 700;
   font-size: 24px;
   margin-bottom: 0;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   word-wrap: break-word;
-  padding: 30px;
+  padding: 10px;
 }
 
-p{
+p{ /*paragraph*/
   text-align: center;
   color: #bacaa1;
   font-family: 'Nunito Sans', sans-serif;
@@ -173,7 +173,21 @@ p{
   padding: 10px;
 }
 
-h4{
+h4{ /*side explanation*/
+  text-align: left;
+  color: #bacaa1;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+  margin-bottom: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+h5{ /*center explanation*/
   text-align: center;
   color: #bacaa1;
   font-family: 'Nunito Sans', sans-serif;
@@ -184,7 +198,7 @@ h4{
   margin-left: auto;
   margin-right: auto;
   word-wrap: break-word;
-  padding: 25px;
+  padding: 15px;
 }
 
 .vimeo {
