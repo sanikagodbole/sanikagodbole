@@ -386,11 +386,11 @@ h5{ /*center explanation*/
 
 
 .jade {
-    background-image: url("./images/jade/stoneLionsPOC.png");
+    background-image: url("./images/jade/stoneLionsPOC_containercover.png");
     background-size: 105% 105%;
 }
 .jade:hover {
-    background-image: url("./images/jade/stoneLionsPOC_dark.jpg");
+    background-image: url("./images/jade/stoneLionsPOC_containercover_dark.jpg");
     background-size: 105% 105%;
 }
 
