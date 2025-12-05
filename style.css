@@ -313,77 +313,77 @@ h5{ /*center explanation*/
 
 
 .vineGrowth {
-    background-image: url("./images/vineGrowth/Procedural_Vine_Growth_Final_00245.png");
+    background-image: url("./images/vineGrowth/vinegrowth_cover.png");
 }
 .vineGrowth:hover {
-    background-image: url("./images/vineGrowth/vines_full_dark.jpg");
+    background-image: url("./images/vineGrowth/vinegrowth_cover_dark.png");
 }
 
 
 .divinationHome {
-  background-image: url("./images/divinationHome/Home_Model_v3.0120.png");
+  background-image: url("./images/divinationHome/divination_cover.jpg");
 }
 .divinationHome:hover {
-    background-image: url("./images/divinationHome/divination_dark.jpg");
+    background-image: url("./images/divinationHome/divination_cover_dark.jpg");
 }
 
 
 .tropicalEscape {
-  background-image: url("./images/tropicalEscape/FishSequence.0000.jpeg");
+  background-image: url("./images/tropicalEscape/tropicalEscape_cover.jpg");
 }
 .tropicalEscape:hover {
-  background-image: url("./images/tropicalEscape/tropicalescape_dark.jpg");
+  background-image: url("./images/tropicalEscape/tropicalEscape_cover_dark.jpg");
 }
 
 
 .oshkosh {
-  background-image: url("./images/oshkoshScripts/oshkosh_material.jpg");
+  background-image: url("./images/oshkoshScripts/oshkosh_cover.jpg");
 }
 .oshkosh:hover {
-  background-image: url("./images/oshkoshScripts/oshkosh_dark.jpg");
+  background-image: url("./images/oshkoshScripts/oshkosh_cover_dark.jpg");
 }
 
 
 .empireOfLight {
-  background-image: url("./images/empireOfLight/VSFX316_MoodMatch_Bouquet_v02MoodChange1_0001.png");
-  background-size: 130% 100%;
+  background-image: url("./images/empireOfLight/empireOfLight_cover.jpg");
+  background-size: 100% 100%;
 
 }
 .empireOfLight:hover {
-  background-image: url("./images/empireOfLight/VSFX316_MoodMatch_Export_v1.png");
-  background-size: 130% 100%;
+  background-image: url("./images/empireOfLight/empireOfLight_cover_dark.jpg");
+  background-size: 100% 100%;
 }
 
 .proceduralBuildings {
-  background-image: url("./images/proceduralBuildings/comp5.png");
+  background-image: url("./images/proceduralBuildings/proceduralbulding_cover.jpg");
   background-size: 130% 100%;
 
 }
 .proceduralBuildings:hover {
-  background-image: url("./images/proceduralBuildings/proceduralbulding_dark.jpg");
+  background-image: url("./images/proceduralBuildings/proceduralbulding_cover_dark.jpg");
   background-size: 130% 100%;
 }
 
 .VEXdrink {
-  background-image: url("./images/VEXdrink/SAV_Fall2025_VFX_SanikaGodbole_Steele_Project5a_FINAL_WITH_EDITS.png");
+  background-image: url("./images/VEXdrink/vexdrink_cover.jpg");
 
 }
 .VEXdrink:hover {
-  background-image: url("./images/VEXdrink/vexdrink_dark.jpg");
+  background-image: url("./images/VEXdrink/vexdrink_cover_dark.jpg");
 }
 
 .jblPlug {
-    background-image: url("./images/jblPlug/W25_V316_P2_GodboleSanika_Render.png");
+    background-image: url("./images/jblPlug/jbl_cover.jpg");
     background-size: 105% 105%;
 }
 .jblPlug:hover {
-    background-image: url("./images/jblPlug/jbl_dark.jpg");
+    background-image: url("./images/jblPlug/jbl_cover_dark.jpg");
     background-size: 105% 105%;
 }
 
 
 .jade {
-    background-image: url("./images/jade/stoneLionsPOC_containercover.png");
+    background-image: url("./images/jade/stoneLionsPOC_containercover.jpg");
     background-size: 105% 105%;
 }
 .jade:hover {
