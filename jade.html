@@ -67,7 +67,8 @@
                     <a href="https://github.com/sanikagodbole/jade" class="home-btn" target="_blank">LINK TO GITHUB</a>
                 </div>
                 <div class = "youtube">
-                    <iframe src="https://www.youtube.com/embed/XxlUs00cx1o?si=hyvTowEmb84UWq-J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </div>
+                    <iframe src="https://www.youtube.com/embed/02FnBFhQjg0?si=_lu8fgtc0FMGBTKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
                 <div class = "youtube">
                     <iframe src="https://www.youtube.com/embed/qVmtgsscNSg?si=_4UHr9JrEMEdbCsO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
@@ -81,11 +82,39 @@
                 <h5>
                     For each shot, our file references will come from the publish folder. Which means every time an asset is updated, it will automatically update in each shot file. Because the version control is automated with this tool, we are much more likely to stay organized. Less time digging for files, less time repathing assets, more time spent on quality 
                 </h5>
+                <div class="spacer"></div>
+                <div class="spacer"></div>
 
 
 
                 <h1 id="pipeline-blog">Pipeline Tool Blog</h1>
 
+
+
+                <div>
+                    <h3>
+                        December 8, 2025
+                    </h3>
+                    <h4>
+                        This past week I worked on the Publish Asset logic. Since I had already applied this logic in my very first prototype from a couple months ago, I had an idea of how the code would look like. It was important that the files that the code read followed a specific naming convention. Each part of the file name was specified as a type. 
+                    </h4>
+                    <h4>
+                        For ex. lion_geo_v001_sg.usd = "asset_name"_"asset_type"_"version number"_"initials"."ext"
+                    </h4>
+                    <h4>
+                        This will ensure that I can have separate logic for each part, make sure it does not collide. I can connect separate dictionaries, without needing to make a function for every scenario. It also makes it easy to add on more departments as I continue to develop the tool, such as CFX which is a department that I have yet to consider. 
+                    </h4>
+                    <img src="./images/jade/12_8_2025_image2.png" alt="12_8_2025_image1.png" width=50% height = 50%>
+                    <h4>
+                        Lastly, I switched from using Streamlit to PyQt for my GUI. After doing some research, PyQt is used inside our 3D softwares such as Maya, Houdini, Nuke, etc so it makes more sense to use a GUI toolkit that aligns with that. PyQt also has an inbuilt Directory Structure widget that behaves the same as file explorer which is something that I would’ve had to spent separate time to develop in Streamlit. 
+                    </h4>
+                    <img src="./images/jade/11_28_2025_gui.png" alt="12_8_2025_image2.png" width=50% height = 50%>
+                    <h4>
+                        At this stage, I decided to record a preliminary demo and put it in my demo reel. It is now at a point where it is usable to where I can test out pipeline within Houdini and MAYA and then troubleshoot from there. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
 
                 <div>
                     <h3>
@@ -95,6 +124,8 @@
                         I followed the same structure that was used in New Asset to create New Shots. I made a separate function so that I can write the code to create the name of the shot folders based on user input. I then updated the GUI and added in the buttons needed to create these shots. Again, they are based on the Shot, Sequence dictionary which means the code can remain unchanged if I were to change what folders I want in each shot. And below is the newest GUI. 
                     </h4>
                     <img src="./images/jade/11_28_2025_gui.png" alt="11_28_2025_image1.png" width=50% height = 50%>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
                 </div>
 
                 <div>
