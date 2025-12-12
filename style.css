@@ -381,6 +381,12 @@ h5{ /*center explanation*/
     background-size: 105% 105%;
 }
 
+.nyasha {
+    background-image: url("./images/nyasha/nyasha_cover.jpg");
+}
+.nyasha:hover {
+    background-image: url("./images/nyasha/nyasha_coverdark.jpg");
+}
 
 .jade {
     background-image: url("./images/jade/stoneLionsPOC_containercover.jpg");
