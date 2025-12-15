@@ -91,6 +91,36 @@
 
 
 
+
+
+                <div>
+                    <h3>
+                        December 14, 2025
+                    </h3>
+                    <h4>
+                        I started testing Houdini set ups along with the GUI and made changes accordingly. The first issue I was trying to solve was how to export materials and geo in one usd. After some research, I found a the Solaris Component Builder which packages the geo, materials, and textures. Here is where I decided that because the textures outputted from substance painters, can be messy and spontaneous, we don’t have to worry about exporting those through the gui at all and rely on the component builder. I created an Assembly folder where this would take place. This was also useful for characters because we can connect the animated character to the mtl file from the still character. I tested this with a cloth effects test my teammate developed. 
+                    </h4>
+                    <img src="./images/jade/12_14_2025_image1.png" alt="12_14_2025_image1.png" width=30% height = 30%>
+                    <h4>I had to edit the dictionary where the extensions were mapped so that it would run through all the extensions that were exported from the component builder [ .payload.usdc, .mtl.usdc, .geo.usdc ] This also proved to be useful because the usd files were tiny!! As they should be! Hopefully, this will help us minimize the amount of crashing that was occurring. 
+                    </h4>
+                    <img src="./images/jade/12_14_2025_image2.png" alt="12_14_2025_image2.png" width=40% height = 40%>
+                    <h4>
+                        I created a new function for Publishing Shot in my code since this would have some rules that were different and I thought it would be best to keep it separate. First of all, I wanted to make sure users will be able to create new folders and the GUI would update accordingly. This was mainly because it would not make sense to stick all FX into one FX folder. Also, in Publish Shot there are only two dropdowns, Shot # & Department. Apart from these differences, the logic works the same and is based on a mapping dictionary. 
+                    </h4>
+                    <img src="./images/jade/12_14_2025_image3.png" alt="12_14_2025_image3.png" width=30% height = 30%>
+                    <h4>
+                        A big issue that my teammates and I have is that many times we work from home, and all our files needs to be on the shared drive so that all the references work. Since we do not have our own server, it is up to each individual to remember to transfer their files through FIlezilla to the shared drive if they aren’t already. I realized that I can actually access these files from command line and FIlezilla is just a GUI that lets you access them easier. In which case, I can potentially connect the sftp to JADE. That would save everyone a massive step of remembering to “Publish” whenever they have access to the shared drive. They can do it from home. Below is cool hacker-y command line message lol. 
+                    </h4>
+                    <img src="./images/jade/12_14_2025_image4.png" alt="12_14_2025_image4.png" width=30% height = 30%>
+                    <h4>
+                        And lastly, I would like to say, if there’s anything I’ve learned from this project, it’s that dictionaries are LITERALLY your bestest friend. I love dictionaries. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+
+
                 <div>
                     <h3>
                         December 8, 2025
