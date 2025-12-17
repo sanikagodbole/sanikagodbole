@@ -82,16 +82,40 @@
                 <h5>
                     For each shot, our file references will come from the publish folder. Which means every time an asset is updated, it will automatically update in each shot file. Because the version control is automated with this tool, we are much more likely to stay organized. Less time digging for files, less time repathing assets, more time spent on quality 
                 </h5>
+                <div class="spacer" id="pipeline-blog"></div>
                 <div class="spacer"></div>
-                <div class="spacer"></div>
 
 
 
-                <h1 id="pipeline-blog">Pipeline Tool Blog</h1>
+                <h1>Pipeline Tool Blog</h1>
 
 
 
 
+
+
+
+                <div>
+                    <h3>
+                        December 17, 2025
+                    </h3>
+                    <h4>
+                        I don’t know how I didn’t catch this earlier but when the Component Builder packages materials & textures, and you read in these files in another file, It is based on the name that we exported the textures as. That means when it runs through the GUI and deletes the version number, the shot name can no longer read the textures.
+                    </h4>
+                    <h4>
+                        My first attempt at resolving this was to publish the textures separately. I added back in the texture publish logic in my JADE code. I also came up with a special texture file naming convention since it has other important components needed such as type of texture map and UDIMs. However, when I referenced the .mtl file in Shot, the texture files were pathed from the assembly file and they still were not reading. This was seen in the Scene Graph Details tab. 
+                    </h4>
+                    <h4>
+                        Another attempt I had was removing version numbers from the folder as well as the contents of the folder. This was when I noticed a detail in the Scene Graph Details tab, where the path is exactly what is outputted from the Assembly file. This means the textures cannot have version numbers while exporting from Assembly.
+                    </h4>
+                    <h4>
+                        To solve for this, I decided to combine my original Component Builder solution with publishing texture maps separately. The versions will be in the separate “tex” folder. In Assembly, the files will be referenced from publish/tex. In the Component Builder, each part of export options should have $OS EXCEPT for the .textures folder. This ensures that there will be no version numbers present when exporting the textures. The materials & geo will still have their version numbers. And the textures will have their version numbers before they are brought into assembly. (Yay this worked!)
+                    </h4>
+                    <img src="./images/jade/12_17_2025_image1.png" alt="12_17_2025_image1.png" width=50% height = 50%>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+            
 
                 <div>
                     <h3>
