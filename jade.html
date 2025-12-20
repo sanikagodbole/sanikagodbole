@@ -94,6 +94,29 @@
 
 
 
+                <div>
+                    <h3>
+                        December 19, 2025
+                    </h3>
+                    <h4>
+                        Today, I play tested my code with one of my friends to iron out any quirks. I needed to hardcode the initial path where files would be created because of the server setup at SCAD Montgomery Hall. I didn’t want my teammates to need to set environment variables every time they log on to a computer. One immediate issue that was noted was that my friend was unable to run the GUI because the logging file was not imported properly. My solution was to bring the gui file to the top level so it’s at the same level as run_jade.py. 
+                    </h4>
+                    <h4>
+                        Second issue I ran into was that the naming of the files was too case-sensitive. To remove complexity, and wanting to keep the camelCase structure, I got right of the case detection when finding highest version file. 
+                    </h4>
+                    <h4>
+                        Third issue, is that when a new asset is created, in Publish Asset, the assets are not updating in real time. You have to click out of Publish Asset and then back into it in order for them to update. I have this issue noted down and will figure out it out at a later time. 
+                    </h4>
+                    <h4>
+                        Some considerations that we came up with were to include what version was published in the confirmation message and make the message last a little longer than what it is right now. Add a description underneath the middle column to tell users how their files should be named and where they should be placed in order for the script to work. PyQt DOES need to be installed in order for everything to work. Hopefully, it is installed at Monty Hall- will need to check this when we are back in the building. 
+                    </h4>
+                    <h4>
+                        Lastly, I made a shortcut for the jade GUI file at the top level so that my teammates can easily run the script without need to dig through files or run in Command Line or any IDE. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
 
                 <div>
                     <h3>
