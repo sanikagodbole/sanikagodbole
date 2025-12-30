@@ -92,6 +92,33 @@
 
 
 
+                <div>
+                    <h3>
+                        December 28, 2025
+                    </h3>
+                    <h4>
+                        I spent today running through the processes with some of our real assets, making sure there were no errors. The biggest issue I’m still having is that I need to reassign materials to characters after connecting the animation. The non animated assets are working seamlessly. In the USD ROP Output Processors, there is an option to collect all references which was key so that textures in the Set files could always be found no matter where this file was being referenced. 
+                    </h4>
+                    <img src="./images/jade/12_28_2025_image1.png" alt="12_28_2025_image1.png" width=50% height = 50%>
+                    <h4>
+                        There were some inconsistencies between what I had discovered in Houdini versus what I had written in my code which I edited. I updated Naming Conventions in my render guide. I plan to test deploying the app with our film Producer who is currently on campus. When I get back on campus, I will updating our already made assets in our new file system, once again verifying everything is working. I anticipate we will still run into some minor issues, but we will have to start working with Jade to get to them. I am really hoping everything works out- this entire process has been such a learning experience, getting to know the ins and outs of USD and really putting my Python knowledge to the test. I think I will actually cry tears if Jade truly improves efficiency in production as it was created to do. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+
+                </div>
+
+                <div>
+                    <h3>
+                        December 25, 2025
+                    </h3>
+                    <h4>
+                        Today, I tested how to import Cameras from MAYA to Houdini while preserving all its features. We are using the Josh Cam Rig which is a realistic camera movement camera rig. The big issue we were having last time we tried a USD pipeline was that while the camera animation was transferring, the focal length values as well as aspect ratio was not transferring and we had to put down a Camera Edit node to match them up again. Today, I did some research on how other people are transferring their cameras- I tried baking the animation on the Camera in MAYA, tried using the standard alembic file, played around with the settings. Ultimately, what worked is using an Asset Reference node in Houdini (vs what I had originally used was just a Reference node) and turning on the Animation Data option while exporting from MAYA. The Camera curves still turn into Geo. Putting down a Prune node and selecting Prune curves gets rid of the extra camera geo. The Asset Reference node is nice because it has an inbuilt Transform tab which means we can scale down the Camera to real world scale without cluttering the space with Transform nodes. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                    
+                </div>
 
 
                 <div>
