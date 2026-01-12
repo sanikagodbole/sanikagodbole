@@ -60,8 +60,9 @@
     <h1>Real-Time Plant Growth Blog</h1>
         <div>
             <div class = "centered-div">
-                <h2>Header <br> 
-                    </h2>
+                <h5>Plant growth simulation & USD pipeline study in a powerful GPU lab with the goal of creating for real time display   <br> 
+                </h5>
+                
 
                 <div class="spacer"></div>
                 <div class="spacer"></div>
@@ -70,11 +71,82 @@
 
                 <div>
                     <h3>
-                        January 5, 2026
+                        WEEK 1
                     </h3>
+                    <h6>
+                        GOAL OF THE WEEK
+                    </h6>
                     <h4>
-                        text
+                        Incorporate vellum to create a growing vine simulation, output a USD to send to Unreal testing
                     </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        KNOWN ISSUES FROM LAST VINE SIM
+                    </h6>
+                    <h4>
+                        1. Lot of intersecting geo <br> 2. Leaves all look the same/not natural enough <br> 3. Vine movement was not predictable (position of vine changed as it grew)
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        REFERENCES
+                    </h6>
+                    <h4>
+                        <a href="https://www.youtube.com/watch?v=Y6jGjjC5YxA&t=8s" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
+                                Vellum simulation to solve for intersections
+                            </a> <br>
+                        <a href="https://www.youtube.com/watch?v=Y6jGjjC5YxA" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
+                                Time Offsetting 
+                            </a> <br>
+                        <a href="https://www.youtube.com/watch?v=9bsb-WBGPTc" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
+                                KineFX Intro and Rig Set Up
+                            </a>
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        PROCESS
+                    </h6>
+                    <h4>
+                        The first thing I wanted to tackle was to understand the curveu attribute. The curveu attribute remaps the curve for it to fit from 0 to 1 and then it can act as a mask. Which means I can curl the top part of the curve without it affect the bottom. 
+                    </h4>
+                    <h4>
+                        Here is some kineFx rig code I got from the Flower Garden video where he explained the basics of kinefx. This rig gives you a very basic curl animation based on the mask. The attribute wrangle sets up the attribute values based on the point numbers and the rig wrangle is what actually makes the line curl.
+                    </h4>
+                    <img src="./images/realtimePlantGrowth/Week1_Blog/plantgrowth_week1_image6.png" alt="kinefx rig code" width=35% height = 35%/>
+                    <img src="./images/realtimePlantGrowth/Week1_Blog/plantgrowth_week1_image7.png" alt="kinefx rig set up" width=40% height = 40%/>
+                    <h4>
+                        From there, I created a leaf using a line and sweep mesh ribbon. I shaped the sweep with ramp scaling and some noise. I created a base vine stem to which I used copy to points to attach the the individual leaf rigs. I made sure to randomized normal and pscale attributes to break up uniformity.
+                    </h4>
+                    <h4>
+                        I then used a for each loop to path deform the leaf geo with the rig. I later found a VEX code snippet that path deforms better than the default node. 
+                    </h4>
+                    <h4>
+                        The second aspect I wanted to figure out was intersection. I used Paul Esteve’s Flower Project video to find how to connect geometry to a curve and then run a vellum simulation that will keep leaves in a similar position. 
+                    </h4>
+                    <h4>
+                        I animated an exploded view node so that the geometry starts without any intersection and then slowly comes to its final position. I used a Pin To Target vellum constraint with a Soft pin type. This method did not end up working- although the leaves were colliding, they wrinkled along the way as well.
+                    </h4>
+                    <img src="./images/realtimePlantGrowth/Week1_Blog/plantgrowth_week1_image1.png" alt="vellum pin to target set up" width=25% height = 25%/>
+                    <img src="./images/realtimePlantGrowth/Week1_Blog/plantgrowth_week1_image3.png" alt="vellum pin to target result" width=20% height = 20%/>
+                    <h4>
+                        The second method I tried to de-intersect the leaves was using an Attach to Geometry constraint where I pinned the leaves to the stem. Instead of animating the leaves, I stretched the stem on the y-axis til the leaves no longer intersect and then animated it scaling down to its regular size. This method worked beautifully and the leaves very gracefully rested on top of each other with no intersection. 
+                    </h4>
+                    <img src="./images/realtimePlantGrowth/Week1_Blog/plantgrowth_week1_image8.png" alt="vellum attach to geometry set up" width=20% height = 20%/>
+                    <img src="./images/realtimePlantGrowth/Week1_Blog/plantgrowth_week1_image11.png" alt="vellum attach to geometry result" width=30% height = 30%/>
+                    
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                    <h6>
+                        WHAT'S NEXT
+                    </h6>
+                    <h4>
+                        1. Find possibility of preserving curveu attribute for each individual leaf curling from before vellum simulation.<br>
+                        2. Create same curling effect with the base stem and combine with leaf scaling. <br>
+                        3. Time offsetting to make bottom leaves grow before top ones. <br>
+                        4. Since the leaves have attributes transferred from the stem, would the animated values transfer as well? <br>
+                        5. Try using Carve node to draw out the vine <br>
+                        6. Try animating a volume mask which has attributes that will transfer onto vine. <br>
+                    </h4>
+                
 
                     <div class="spacer"></div>
                     <div class="spacer"></div>
