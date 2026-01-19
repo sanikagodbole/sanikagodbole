@@ -429,6 +429,15 @@ h6{ /*blog header*/
     background-size: 105% 105%;
 }
 
+.process {
+    background-image: url("./images/realtimePlantGrowth/Week1_Blog/plantgrowth_week1_image11.png");
+    background-size: 105% 105%;
+}
+.process:hover {
+    background-image: url("./images/realtimePlantGrowth/Week1_Blog/plantgrowth_week1_image11.png");
+    background-size: 105% 105%;
+}
+
 
 
 .process-btn {

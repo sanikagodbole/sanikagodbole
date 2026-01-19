@@ -69,6 +69,129 @@
 
 
 
+
+
+
+
+
+                <div>
+                    <h3>
+                        WEEK 3
+                    </h3>
+                    <h6>
+                        GOAL OF THE WEEK
+                    </h6>
+                    <h4>
+
+                    </h4>
+                    <div class="spacer"></div>
+
+
+
+
+                </div>
+                <div>
+                    <h3>
+                        WEEK 2
+                    </h3>
+                    <h6>
+                        GOAL OF THE WEEK
+                    </h6>
+                    <h4>
+                        1. Continue Vellum studies <br>
+                        2. Explore PDG <br>
+                        3. Explore using feather tools <br>
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        REFERENCES
+                    </h6>
+                    <h4>
+                        <a href="https://youtu.be/lhL-gZXoATM?si=0SxV_wI1obhATSHZ" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
+                            Feather Tutorial
+                        </a> <br>
+                        <a href="https://www.youtube.com/watch?v=h9XpRaTsKI4" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
+                            Feather Tool Used For Petal Rig
+                        </a>
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        PROCESS
+                    </h6>
+                    <h4>
+                        Here are my results from following the feather tutorial. I added a simple scale animation to see how 
+                        the feather animation looks like, it looks like the solve is done very beautifully. 
+                    </h4>
+                    <div class = "youtube">
+                        <iframe width="560" height="560" src="https://www.youtube.com/embed/zFCRo1Y9PoI?si=HaFYSH9kWhQ4vPrm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                    <h4>
+                        The issue I see here is
+                        that I cannot seem to input geo that is not part of the feather tool. The Deintersect reads specific attributes
+                        for the barbs [feather fluffies] and the shaft [feather center]. This leads me to potentially exploring: <br>
+                    </h4>
+                    <h4>
+                        1. Trying to create a square for the barbs with the feather tools so I can create leaves by applying an opacity map<br>
+                        2. Diving inside the Feather Shape tool to see if I can assign those attributes to other geometery
+                        3. Since the Feather Tools are essentially grooms, looking into the Hair tools as well to see if there are other ways to solve intersections
+                    </h4>
+                    <h4>
+                        I did a simple hair groom on a sphere and copied my rigged leaf shape to the hair. This test was unsuccessful, I was unable to deintersect the geomtery. 
+                    </h4>
+                    <h4>
+                        After doing some digging, I found that there is a Feather Surface node that will consolidate the barbs and create a smooth surface like a leaf. 
+                        I tried plugging in this shape into my previous feather Deintersect setup but it looks like this node gets rid of the needed attributes.
+                    </h4>
+                    <h4>
+                        I wanted to revisit the kineFX and vellum set up because it seemed to be working for many artists online. An interesting idea I found was to use the feather tool to create a rig for a leaf, since it is
+                        essentially the same shape as a feather. 
+                        After examining a downloadable Houdini file under one of my references I realized that the starting position of the vellum sim was an open leaf- not the bud position.
+                        I animated the leaf rig to start from the open position to the closed one and then unfolded it again and the collisions were as expected! Here is a flipbook!  
+                    </h4>
+                    <div class = "youtube">
+                        <iframe width="560" height="560" src="https://www.youtube.com/embed/ra967nilZQ0?si=UTtj-hl392tnkZ41" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class = "youtube">
+                        <iframe width="560" height="560" src="https://www.youtube.com/embed/34uwXc2Wtms?si=GuW0kf5kW8LSrlxR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h4>
+                        The next thing was created a PDG set up where I randomized the length, curve, and number of leaves for 10 vines to see how usable the results were. I think for these
+                        vines in particular I was playing very safe with the ranges so I didn't end up with any results that were too crazy. 
+                    </h4>
+                    <img src="./images/realtimePlantGrowth/Week2_Blog/week2_plantgrowth_image1.png" alt="kinefx rig code" width=50% height = 50%/>
+                    <h4>    
+                        The total cache time was 12 hours for 2300 frames on a 3090 computer. I will
+                        be running this set up tomorrow on the Blackwells and see how much faster it is. 
+                    </h4>
+                    <div class = "youtube">
+                        <iframe width="560" height="560" src="https://www.youtube.com/embed/Tas439rG1_4?si=PHzoxIEh-PY4Zm9X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h4>
+                        Here is a render of 600k plants.
+                    </h4>
+                    <div>
+                        <iframe width="560" height="560" src="https://www.youtube.com/embed/9r6MrzZH2X0?si=Ryah28gevyxbwa0D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    
+
+
+                    <div></div>
+
+
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                    <h6>
+                        WHAT'S NEXT
+                    </h6>
+                    <h4>
+                        1. Create a set up so we can plug in different leaf/petal shapes and structures to create different types of plants <br>
+                        2. Test particle system[from gaussian splats?] flower growth
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                
+
+
                 <div>
                     <h3>
                         WEEK 1
@@ -91,7 +214,7 @@
                         REFERENCES
                     </h6>
                     <h4>
-                        <a href="https://www.youtube.com/watch?v=Y6jGjjC5YxA&t=8s" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
+                        <a href="https://youtu.be/U1k1qmim3iA?si=7steb0AizWpu7jhi" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
                                 Vellum simulation to solve for intersections
                             </a> <br>
                         <a href="https://www.youtube.com/watch?v=Y6jGjjC5YxA" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
