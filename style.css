@@ -438,6 +438,12 @@ h6{ /*blog header*/
     background-size: 105% 105%;
 }
 
+.eggLadyBike {
+    background-image: url("./images/eggLadyBike/MB01_TurnAround.0000.jpeg");
+}
+.eggLadyBike:hover {
+    background-image: url("./images/eggLadyBike/eggLadyBike_cover.jpg");
+}
 
 
 .process-btn {
