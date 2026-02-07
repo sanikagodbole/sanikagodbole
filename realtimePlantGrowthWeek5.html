@@ -72,13 +72,15 @@
                         WEEK 4 PROGRESS BLOG
                     </h3>
                     <h6>
+                        GOAL OF THE WEEK
+                    </h6>
+                    <h4>
+                        Getting a good visual of macro growth based on everything I have learned about vellum
+                    </h4>
+                    <h6>
                         REFERENCES
                     </h6>
                     <h4>
-                        <a href="https://www.youtube.com/watch?v=XiPD00zfcF0" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
-                        Close Up Plant Growth 1</a> <br>
-                        <a href="https://www.youtube.com/shorts/JM-BG0Yoygs" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
-                        Close Up Plant Growth 2</a> <br>
                         <a href="https://www.youtube.com/watch?v=U1k1qmim3iA" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
                         Flower Projects - Paul Esteves</a> <br>
                     </h4>
@@ -87,23 +89,16 @@
                         PROCESS
                     </h6>
                     <h4>
-                        In these past couple weeks, I have found what works with vellum and what does not. <br>
-                        1. Pinned points cannot intersect at any point of the simulation <br>
-                        2. Pinned points can be used to guide animation. <br>
-                        3. Use other surrouding geometry to force the right shape <br>
-                        4. Plant should start from open position and then close into a bud <br>
+                        Now that I have a single blooming leaf bud, I need to connect it to a stem. I am revisiting my USD Challenge project where my leaves connected to the stem as it grew. 
+                        While the double vellum simuation of a bud inside a bud gave good results- it seems impractical to do for an entire vine. I shifted my focus to creating a growing curve with other curves attached to it. <br>
+                        The first thing I tried was the Carve node. While this worked for a singular curve, when I tried to use it for multiple curves, it would grow them all at once.<br>
+                        I asked Gemini if it could give me some VEX code which would grow all the curve based on their position. I ended up using a Sort node to make sure the point numbers aligned with their positions. And then in a
+                        wrangle, added a slider that would delete points based on the point number. 
                     </h4>
                     <h4>
-                        While I got a vine growing working for the AI Jam, I want to use what I have learned to focus on creating a macro
-                        unfurl of a plant, which means paying attention to the details.<br>
-                        <a href="https://www.youtube.com/watch?v=XiPD00zfcF0" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
-                        Close Up Plant Growth Reference</a> <br>
-                        
-                        In these videos, it is clear that the leaves start from a bud and then unfurl outwards. As the stem grows, a new bud develops
-                        and the process repeats. 
-                    </h4>
+                        I copied to points the animated leaf bud and ran a vellum simulation. I used the stem as a collider. I have realized that when the simulation is stationary it gives me better results. So I am trying to find a way
+                        where I can run the vellum simulation first and then timeshift it so it is aligned with what I want. 
                     <h4>
-                        I also want to properly examine the processes of other artists instead of trying to figure it from scratch out myself. So to start off with, I am revisiting the Paul Esteves' Flower Projects video. 
                     </h4>
 
 
