@@ -69,7 +69,7 @@
 
                 <div>
                     <h3>
-                        WEEK 4 PROGRESS BLOG
+                        WEEK 5 PROGRESS BLOG
                     </h3>
                     <h6>
                         GOAL OF THE WEEK
@@ -95,11 +95,26 @@
                         I asked Gemini if it could give me some VEX code which would grow all the curve based on their position. I ended up using a Sort node to make sure the point numbers aligned with their positions. And then in a
                         wrangle, added a slider that would delete points based on the point number. 
                     </h4>
+                    <div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/GCqhT7x9gow?si=IFxdKnchqIY00KT8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                     <h4>
-                        I copied to points the animated leaf bud and ran a vellum simulation. I used the stem as a collider. I have realized that when the simulation is stationary it gives me better results. So I am trying to find a way
-                        where I can run the vellum simulation first and then timeshift it so it is aligned with what I want. 
-                    <h4>
+                        Some issues that I still have to fix are the popping of the leaf buds. I also have not aligned this stem version with the vellum leaves yet. I will be referencing my vine from the USD Challenge
+                        as well as deleting buds based on the curveu value to try to align the growing stem with the vellum leaves.
+
                     </h4>
+                    <h4>
+                        I did a timeshift in a for each loop containing a copy to points which would offset the animation for every leaf bud. I added some attribute noise on the stem so it would naturally sway.
+                    <h4>
+                    <div class = "youtube">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/TMz5wYOPCGo?si=KtJhQ0Ncl7wImxYt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h4>
+                        I also started working on preliminary look development. Here is what I have so far. The texture map is just an image I found on the internet for now. I was focusing on dialing in the shader properties. 
+                    </h4>
+                    <div class = "image">
+                        <img src="./images/realtimePlantGrowth/Week5_Blog/macro3.png">
+                    </div>
 
 
 
@@ -112,7 +127,8 @@
                         WHAT'S NEXT
                     </h6>
                     <h4>
-                        1. Focus on getting a good macro visual given everything I have learned so far
+                        1. Focusing on the connection of the leaves and stem
+                        2. Making sure there are no collision issues
                     </h4>
 
 
