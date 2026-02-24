@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanika Godbole</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" href="./images/resume/logo.png"/>
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S0RG2W1M9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S0RG2W1M9K');
+</script>
+
+
+<body>
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#bacaa1"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="./index.html">SANIKA GODBOLE</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./fineart.html">Fine Art</a></li>
+            <li><a href="./process.html">Process</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+        <ul>
+            <li><a href="./index.html">SANIKA GODBOLE</a></li>
+            <li class="hideOnMobile"><a href="./index.html">HOME</a></li>
+            <li class="hideOnMobile"><a href="./portfolio.html">PORTFOLIO</a></li>
+            <li class="hideOnMobile"><a href="./fineart.html">FINE ART</a></li>
+            <li class="hideOnMobile"><a href="./process.html">PROCESS</a></li>
+            <li class="hideOnMobile"><a href="./about.html">ABOUT</a></li>
+            <li class="menu-button" onclick=showSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#bacaa1"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <script> 
+        function showSideBar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSideBar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <h1>JADE AUTOMATION TOOL BLOG</h1>
+        <div>
+            <div class = "centered-div">
+                <h2>Developed for Student Capstone Production<br>
+                    Stone Lions Don't Roar<br>
+                </h2>
+                
+                <div>
+                    <a href="./jade.html#pipeline-blog" class="home-btn">BACK</a>
+                </div>
+
+
+                <div>
+                    <h3>
+                        December 28, 2025
+                    </h3>
+                    <h4>
+                        I spent today running through the processes with some of our real assets, making sure there were no errors. The biggest issue I’m still having is that I need to reassign materials to characters after connecting the animation. The non animated assets are working seamlessly. In the USD ROP Output Processors, there is an option to collect all references which was key so that textures in the Set files could always be found no matter where this file was being referenced. 
+                    </h4>
+                    <img src="./images/jade/12_28_2025_image1.png" alt="12_28_2025_image1.png" width=50% height = 50%>
+                    <h4>
+                        There were some inconsistencies between what I had discovered in Houdini versus what I had written in my code which I edited. I updated Naming Conventions in my render guide. I plan to test deploying the app with our film Producer who is currently on campus. When I get back on campus, I will updating our already made assets in our new file system, once again verifying everything is working. I anticipate we will still run into some minor issues, but we will have to start working with Jade to get to them. I am really hoping everything works out- this entire process has been such a learning experience, getting to know the ins and outs of USD and really putting my Python knowledge to the test. I think I will actually cry tears if Jade truly improves efficiency in production as it was created to do. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+
+                </div>
+
+                <div>
+                    <h3>
+                        December 25, 2025
+                    </h3>
+                    <h4>
+                        Today, I tested how to import Cameras from MAYA to Houdini while preserving all its features. We are using the Josh Cam Rig which is a realistic camera movement camera rig. The big issue we were having last time we tried a USD pipeline was that while the camera animation was transferring, the focal length values as well as aspect ratio was not transferring and we had to put down a Camera Edit node to match them up again. Today, I did some research on how other people are transferring their cameras- I tried baking the animation on the Camera in MAYA, tried using the standard alembic file, played around with the settings. Ultimately, what worked is using an Asset Reference node in Houdini (vs what I had originally used was just a Reference node) and turning on the Animation Data option while exporting from MAYA. The Camera curves still turn into Geo. Putting down a Prune node and selecting Prune curves gets rid of the extra camera geo. The Asset Reference node is nice because it has an inbuilt Transform tab which means we can scale down the Camera to real world scale without cluttering the space with Transform nodes. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+
+                <div>
+                    <h3>
+                        December 19, 2025
+                    </h3>
+                    <h4>
+                        Today, I play tested my code with one of my friends to iron out any quirks. I needed to hardcode the initial path where files would be created because of the server setup at SCAD Montgomery Hall. I didn’t want my teammates to need to set environment variables every time they log on to a computer. One immediate issue that was noted was that my friend was unable to run the GUI because the logging file was not imported properly. My solution was to bring the gui file to the top level so it’s at the same level as run_jade.py. 
+                    </h4>
+                    <h4>
+                        Second issue I ran into was that the naming of the files was too case-sensitive. To remove complexity, and wanting to keep the camelCase structure, I got right of the case detection when finding highest version file. 
+                    </h4>
+                    <h4>
+                        Third issue, is that when a new asset is created, in Publish Asset, the assets are not updating in real time. You have to click out of Publish Asset and then back into it in order for them to update. I have this issue noted down and will figure out it out at a later time. 
+                    </h4>
+                    <h4>
+                        Some considerations that we came up with were to include what version was published in the confirmation message and make the message last a little longer than what it is right now. Add a description underneath the middle column to tell users how their files should be named and where they should be placed in order for the script to work. PyQt DOES need to be installed in order for everything to work. Hopefully, it is installed at Monty Hall- will need to check this when we are back in the building. 
+                    </h4>
+                    <h4>
+                        Lastly, I made a shortcut for the jade GUI file at the top level so that my teammates can easily run the script without need to dig through files or run in Command Line or any IDE. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+
+                <div>
+                    <h3>
+                        December 17, 2025
+                    </h3>
+                    <h4>
+                        I don’t know how I didn’t catch this earlier but when the Component Builder packages materials & textures, and you read in these files in another file, It is based on the name that we exported the textures as. That means when it runs through the GUI and deletes the version number, the shot name can no longer read the textures.
+                    </h4>
+                    <h4>
+                        My first attempt at resolving this was to publish the textures separately. I added back in the texture publish logic in my JADE code. I also came up with a special texture file naming convention since it has other important components needed such as type of texture map and UDIMs. However, when I referenced the .mtl file in Shot, the texture files were pathed from the assembly file and they still were not reading. This was seen in the Scene Graph Details tab. 
+                    </h4>
+                    <h4>
+                        Another attempt I had was removing version numbers from the folder as well as the contents of the folder. This was when I noticed a detail in the Scene Graph Details tab, where the path is exactly what is outputted from the Assembly file. This means the textures cannot have version numbers while exporting from Assembly.
+                    </h4>
+                    <h4>
+                        To solve for this, I decided to combine my original Component Builder solution with publishing texture maps separately. The versions will be in the separate “tex” folder. In Assembly, the files will be referenced from publish/tex. In the Component Builder, each part of export options should have $OS EXCEPT for the .textures folder. This ensures that there will be no version numbers present when exporting the textures. The materials & geo will still have their version numbers. And the textures will have their version numbers before they are brought into assembly. (Yay this worked!)
+                    </h4>
+                    <img src="./images/jade/12_17_2025_image1.png" alt="12_17_2025_image1.png" width=50% height = 50%>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+            
+
+                <div>
+                    <h3>
+                        December 14, 2025
+                    </h3>
+                    <h4>
+                        I started testing Houdini set ups along with the GUI and made changes accordingly. The first issue I was trying to solve was how to export materials and geo in one usd. After some research, I found a the Solaris Component Builder which packages the geo, materials, and textures. Here is where I decided that because the textures outputted from substance painters, can be messy and spontaneous, we don’t have to worry about exporting those through the gui at all and rely on the component builder. I created an Assembly folder where this would take place. This was also useful for characters because we can connect the animated character to the mtl file from the still character. I tested this with a cloth effects test my teammate developed. 
+                    </h4>
+                    <img src="./images/jade/12_14_2025_image1.png" alt="12_14_2025_image1.png" width=30% height = 30%>
+                    <h4>I had to edit the dictionary where the extensions were mapped so that it would run through all the extensions that were exported from the component builder [ .payload.usdc, .mtl.usdc, .geo.usdc ] This also proved to be useful because the usd files were tiny!! As they should be! Hopefully, this will help us minimize the amount of crashing that was occurring. 
+                    </h4>
+                    <img src="./images/jade/12_14_2025_image2.png" alt="12_14_2025_image2.png" width=40% height = 40%>
+                    <h4>
+                        I created a new function for Publishing Shot in my code since this would have some rules that were different and I thought it would be best to keep it separate. First of all, I wanted to make sure users will be able to create new folders and the GUI would update accordingly. This was mainly because it would not make sense to stick all FX into one FX folder. Also, in Publish Shot there are only two dropdowns, Shot # & Department. Apart from these differences, the logic works the same and is based on a mapping dictionary. 
+                    </h4>
+                    <img src="./images/jade/12_14_2025_image3.png" alt="12_14_2025_image3.png" width=30% height = 30%>
+                    <h4>
+                        A big issue that my teammates and I have is that many times we work from home, and all our files needs to be on the shared drive so that all the references work. Since we do not have our own server, it is up to each individual to remember to transfer their files through FIlezilla to the shared drive if they aren’t already. I realized that I can actually access these files from command line and FIlezilla is just a GUI that lets you access them easier. In which case, I can potentially connect the sftp to JADE. That would save everyone a massive step of remembering to “Publish” whenever they have access to the shared drive. They can do it from home. Below is cool hacker-y command line message lol. 
+                    </h4>
+                    <img src="./images/jade/12_14_2025_image4.png" alt="12_14_2025_image4.png" width=30% height = 30%>
+                    <h4>
+                        And lastly, I would like to say, if there’s anything I’ve learned from this project, it’s that dictionaries are LITERALLY your bestest friend. I love dictionaries. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+
+
+                <div>
+                    <h3>
+                        December 8, 2025
+                    </h3>
+                    <h4>
+                        This past week I worked on the Publish Asset logic. Since I had already applied this logic in my very first prototype from a couple months ago, I had an idea of how the code would look like. It was important that the files that the code read followed a specific naming convention. Each part of the file name was specified as a type. 
+                    </h4>
+                    <h4>
+                        For ex. lion_geo_v001_sg.usd = "asset_name"_"asset_type"_"version number"_"initials"."ext"
+                    </h4>
+                    <h4>
+                        This will ensure that I can have separate logic for each part, make sure it does not collide. I can connect separate dictionaries, without needing to make a function for every scenario. It also makes it easy to add on more departments as I continue to develop the tool, such as CFX which is a department that I have yet to consider. 
+                    </h4>
+                    <img src="./images/jade/12_8_2025_image2.png" alt="12_8_2025_image1.png" width=50% height = 50%>
+                    <h4>
+                        Lastly, I switched from using Streamlit to PyQt for my GUI. After doing some research, PyQt is used inside our 3D softwares such as Maya, Houdini, Nuke, etc so it makes more sense to use a GUI toolkit that aligns with that. PyQt also has an inbuilt Directory Structure widget that behaves the same as file explorer which is something that I would’ve had to spent separate time to develop in Streamlit. 
+                    </h4>
+                    <img src="./images/jade/12_8_25_gui.png" alt="12_8_2025_image2.png" width=50% height = 50%>
+                    <h4>
+                        At this stage, I decided to record a preliminary demo and put it in my demo reel. It is now at a point where it is usable to where I can test out pipeline within Houdini and MAYA and then troubleshoot from there. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+                <div>
+                    <h3>
+                        November 28, 2025
+                    </h3>
+                    <h4>
+                        I followed the same structure that was used in New Asset to create New Shots. I made a separate function so that I can write the code to create the name of the shot folders based on user input. I then updated the GUI and added in the buttons needed to create these shots. Again, they are based on the Shot, Sequence dictionary which means the code can remain unchanged if I were to change what folders I want in each shot. And below is the newest GUI. 
+                    </h4>
+                    <img src="./images/jade/11_28_2025_gui.png" alt="11_28_2025_image1.png" width=50% height = 50%>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+                <div>
+                    <h3>
+                        November 27, 2025
+                    </h3>
+                    <h4>
+                        I worked on creating the GUI today. I created a list of all the elements I want in my GUI. I want three vertical sections- first section, contains the actions that the user can perform. This contains a “New Asset” and a “Publish Asset” function. The second section opens the window for the action selected. And the third section contains the folder directory, so that you are able to see the results of what the user clicks. I created a very thorough list and inputted this list into Claude AI. This gave me a base GUI that I can use to test my code faster. I can always make changes and make it pretty according to me later. 
+                    </h4>
+                    <img src="./images/jade/11_27_25_gui.png" alt="11_27_2025_image1.png" width=50% height = 50%>
+                    <h4>
+                        I connected the New Assets function from earlier to the buttons in the GUI and makes sure everything works as it should. (it does!) Next steps, I will work on building the Publish Assets code. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+                <div>
+                    <h3>
+                        November 24, 2025
+                    </h3>
+                    <h4>
+                        Today, I worked on creating the same recursive function for the user directed folder creation. This function would be used to create a consistent file directory for new assets. Like the previous recursive function, I created a dictionary for the file structure I want for the working and publish directories. 
+                    </h4>
+                    <img src="./images/jade/11_24_2025_image1.png" alt="11_24_2025_image1.png" width=25% height = 25%>
+                    <h4>
+                        I have two for loops, one for working, one for publish, and I run the same create_paths function as earlier except by passing in the new root directories parameter. My next steps would be to create a GUI and add a user input box. 
+                    </h4>
+                    <img src="./images/jade/11_24_2025_image2.png" alt="11_24_2025_image2.png" width=50% height = 50%>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+
+                <div>
+                    <h3>
+                        November 22, 2025
+                    </h3>
+                    <h4>
+                        The first thing I did was that since this tool was based on creating the file structure in a user informed directory, I had to make sure it ran both in Windows AND Linux. I created a JSON file that includes all the environment variables needed to run the tool. This file would launch the tool, collect the user profile, and create a base directory. In the README, here is where I included that the user can change where they want it given the syntax.
+                    </h4>
+                    <h4>
+                        I realized that while making my new file structure I was reusing the same code for each layer of the structure. It ended up with me creating different variables for different parts of the structure that did the exact same thing. This means I can transform my existing code into a function. 
+                    </h4>
+                    <h4>
+                        I created a dictionary with the base structure- without the user defined folders- which would indicate which folders reside in which folder. 
+                    </h4>
+                    <img src="./images/jade/11_22_2025_image1.png" alt="11_22_2025_image1.png" width=50% height = 50%>
+                    <h4>
+                        The parameters would include the root directory and the current directory. The recursive pattern of the code makes it so that after the code finishes going through making the folders of the directory it’s in, it makes that the root directory, and the next directory the current directory. It goes through the entire dictionary directory pattern til all the folders have been created. 
+                    </h4>
+                    <img src="./images/jade/11_22_2025_image2.png" alt="11_22_2025_image2.png" width=50% height = 50%>
+                    <h4>
+                        By creating the structure in this way, if the structure changes in the future, I simply have to edit the dictionary without changing the code itself and the tool will still work. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+
+                <div>
+                    <h3>
+                        October 2, 2025
+                    </h3>
+                    <h4>
+                        Based on the environment variables initialized I started building the file structure within the code itself instead of doing that manually so that I can easily change things around if needed (hopefully this is the final version!) I did restart from what I started in my first blog post. The first iteration was a good learning moment for me to understand the parameters of this project. I am making sure to use forward slashes to stay consistent without Windows and Linux, since I can easily convert it to a raw string for Windows. I am using the Pathlib library to create my file pathing to make my code more procedural and less dependent on manually connecting strings. ​Here is my github link for the entire code and structure I have so far: https://github.com/sanikagodbole/jade
+                    </h4>
+                    <img src="./images/jade/10_2_2025_image1.png" alt="10_2_2025_image1.png" width=50% height = 50%>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+
+                </div>
+
+                <div>
+                    <h3>
+                        October 1, 2025
+                    </h3>
+                    <h4>
+                        In order to prep for asset tracking, I did some research on how to get variables such as user name and computer attributes from the system itself. If I want the code to run a certain way according to a path, it is best to create environment variables that must be initialized before running the code. My side goal is to make sure that this app works for both Windows and Linux operating systems. I also learned about Classes in Python so that I can consistently access these variables in different python files in the same project folder. 
+                    </h4>
+                    <img src="./images/jade/10_1_2025_image1.png" alt="10_1_2025_image1.png" width=50% height = 50%>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+
+                </div>
+
+                <div>
+                    <h3>
+                        September 9, 2025
+                    </h3>
+                    <h4>
+                        I got some feedback on what I had today. This feedback included incorporating some tracking system to indicate when each asset was updating, which asset, and who updated it. I also learned a little about folder structure for the code itself and advice on how to make the code as procedural as possible without needed to hardcode file paths. 
+                    </h4>
+                    <h4>
+                        We DO have a finalized file structure after researching more about USD and production pipelines from Technical Directors who are already in the industry. 
+                    </h4>
+                    <h4>
+                        This structure indicated that we can copy the entire export folder from working to the publish folder without having export files in multiple places for each asset type making it a very clean system. 
+                    </h4>      
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>       
+                </div>
+
+                <div>
+                    <h3>
+                        September 14, 2025
+                    </h3>
+                    <h4>
+                        I spent today cleaning up the script. There were a lot of lines that I had hardcoded the file paths for just so I could plan out how my variables would work. I made sure to fix those lines and make sure everything in my script was relative pathing. This also makes it easier if needed to change the folder structure (which is highly likely since there has been some back and forth with how we are going to copy the files we need for the Renderfarm). And a long term goal I thought about would be to create this app so that it can be used for any production- not just Stone Lions. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+                <div>
+                    <h3>
+                        September 12, 2025
+                    </h3>
+                    <h4>
+                        I started working incorporating the script for the textures and rigs. Since there was no file conversion for rig files and they will always *.mb all I had to do was copy the latest version file, strip the version number and then copy that file into the publish folder. This was pretty straightforward and is making me wonder if I can ask the artist to export out .usd from their model files as they are already used to exporting .fbx, then I can do the same as what I did for the rig files and there will be no error message. 
+                    </h4>
+                    <img src="./images/jade/9_12_2025_image1.png" alt="9_12_2025_image1.png" width=50% height = 50%>
+                    <h4>
+                        We are still working on the best file structure to organize our files with. Right now, the dev and publish folders were inside every asset folder. However, for the renderfarm, the final scene usd has to be at the top of the $HIP and we have to figure if too many complicated pathing for the references would cause issues when rendering. We are debating creating a publish asset folder at the top level of the $HIP that would include all the usd copies. 
+                    </h4>
+                    <h4>
+                        Last thing I worked on today was making the GUI look cute!
+                    </h4>
+                    <img src="./images/jade/9_12_2025_image2.png" alt="9_12_2025_image2.png" width=25% height = 25%>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+                <div>
+                    <h3>
+                        September 10, 2025  
+                    </h3>
+                    <h4>
+                        The remaining aspects of the model portion of the script included renaming the .usd so that it does not include the version number so that it will always update when the script is run.
+                    </h4>
+                    <img src="./images/jade/9_10_2025_image1.png" alt="9_10_2025_image1.png" width=50% height = 50%>
+                    <h4>
+                        I keep receiving an error message which is causing the script to crash and therefore not return to the main script after the message. For now, I ended up ‘delaying’ the error message so that everything I want occurs before it. So, while there is still a scary message at the end of the script, it completes the function that I created it for before doing so. 
+                    </h4>
+                    <h4>
+                        The last part of the script is to copy the final usd into the publish render folder. Initially, I wanted the maya script to end and then return to the main script to publish it. However, because of the error, I had to set up the file path again in the maya script and then copy it over within the maya script. So officially, while there still are some tweaks needed to be made for the script to work cleanly, it does work for the pipeline!
+                    </h4>
+                    <img src="./images/jade/9_10_2025_image2.png" alt="9_10_2025_image2.png" width=50% height = 50%>
+                    <h4>
+                        Another issue I have is that within the asset folders. If there are multiple assets, for example: jiejiebust and jiejiearm (for ex) script disregards what it is called and only looks for version number so whichever asset has the highest version number that is all that will be exported. Something I will look into in the upcoming days. My next steps will be to figure out how I can use this same set up for textures, rigs, and animation and tweak things accordingly for those assets. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                </div>
+
+                <div>
+                    <h3>
+                        September 8, 2025
+                    </h3>
+                    <h4>
+                        I wanted to create a USD Pipeline tool for my senior capstone film, Stone Lions Don't Roar, to help with file management and asset version control. We have team of 20 people for a 5 minute long film, and a tool to streamline pipeline would make our production process run more smoothly. Additionally, this tool is something I had always wanted to create, and capstone was the perfect moment for me to experiment. 
+                    </h4>
+                    <h4>
+                        My first step was to write down a potential file structure that we would use. The idea is that there will be a working folder with versions and a publish folder where the most recent version of the USD file will automatically publish to. The final version would be renamed to a version-less name so that the USD in the publish folder will be overwritten and the pipeline would work seamlessly without needing to re-export and import every time a change has been made. This is the folder structure: 
+                    </h4>
+                    <h4>
+                        The script they would need to run is: python I:\Savannah\CollaborativeSpace\stonelions\tools\fakemarble\pipeline_script.py In Command Prompt. When run, the following basic GUI appears. 
+                    </h4>
+                    <img src="./images/jade/9_8_2025_image1.png" alt="9_8_2025_image1.png" width=25% height = 25%>
+                    <h4>
+                        The Categories are char, prop, and set. Based on which Category is selected, the script locates to that folder, and the subfolders of that folder appears in the Asset dropdown menu. 
+                    </h4>
+                    <img src="./images/jade/9_8_2025_image2.png" alt="9_8_2025_image2.png" width=50% height = 50%>
+                    <h4>
+                        The Department indicated what part of the pipeline you are publishing. This drop down has model, texture, rig, and animation options. When you click Publish, the script connects the user selections to find the file path of what the artist is publishing. It then finds the highest version number of the working files, opens the MAYA file, and exports the geo into a *.usd. 
+                    </h4>
+                    <img src="./images/jade/9_8_2025_image3.png" alt="9_8_2025_image3.png" width=50% height = 50%>
+                    <img src="./images/jade/9_8_2025_image4.png" alt="9_8_2025_image4.png" width=50% height = 50%>
+                    <h4>
+                        My next steps would be trying to copy this usd file that is created into the final render folder for the shot. ​​​​​​​​
+                    </h4>
+                </div>
+                <div>
+                    <a href="./jade.html#pipeline-blog" class="home-btn">BACK</a>
+                </div>
+
+        </div>
+
+
+
+    <div class="bottomBar" >
+    <a href="https://linkedin.com/in/sanika-godbole-b12954200/" style="padding: 5px;" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#bacaa1"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+
+    <a href="https://github.com/sanikagodbole" style="padding: 5px;" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#bacaa1"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+    <a href="https://www.instagram.com/alien_sanika" style="padding: 5px;" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#bacaa1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+    <a href="mailto:sanikavgodbole@gmail.com" style="padding: 5px;" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#bacaa1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+    </div>
