@@ -54,10 +54,10 @@
         }
     </script>
 
-    <div class="spacer" id="realtime-plant-growth-blog"></div>
     <div class="spacer"></div>
     <div class="spacer"></div>
-    <h1>Real-Time Plant Growth Blog</h1>
+    <div class="spacer"></div>
+    <h1>Real-Time Plant Growth</h1>
         <div>
             <div class = "centered-div">
                 <h5>Plant growth simulation & USD pipeline study in a powerful GPU lab with the goal of creating for real time display   <br> 
@@ -66,8 +66,141 @@
 
                 <div class="spacer"></div>
                 <div class="spacer"></div>
+                <div class = "youtube">
+                    <iframe src="https://www.youtube.com/embed/Xwx5tEGMNrM?si=zwcysd5HCKHa5gJ-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
+                <div class="spacer"  id="realtime-plant-growth-blog"></div>
+                <div class="spacer"></div>
+                <h1>
+                    SUMMARY OF QUARTER
+                </h1>
+                <div>
+                    <a href="./realtimePlantGrowth.html#realtime-plant-growth-weekly-blog" class="home-btn">WEEKLY BLOGS</a>
+                </div>
+                <h6>
+                    Vellum Successes
+                </h6>
+                <h4>
+                    To control Vellum, there were unusual things needed to be done a lot of which involved hand animating a certain aspect. <br>
+                </h4>
+                <h4>
+                    1. Using multiple “petals” to force internal “petals” together, and then blasting so that only two leaves remain <br>
+                    2. Having a basic Rig on the plant was crucial because the vellum is ultimately following the animation <br>
+                    <img src="./images/realtimePlantGrowth/summaryOfQuarter/kinefxRig.png" alt="kinefx" width=50% height = 50%/> <br> <br>
+                    3. The balance between pinning enough points, but not too much so that there is natural movement, hard pins would allow the leaves to stick to the stem better, but soft pins allowed for more natural movement <br>
+                </h4>
+                <h4>
+                    Some other things I learned:
+                </h4>
+                <h4>
+                    1. Vellum rest blend was crucial to having the simulation follow the hand animation- as long as starting frame has no intersections, the rest followed <br>
+                    <img src="./images/realtimePlantGrowth/summaryOfQuarter/restBlend.png" alt="restBlend" width=40% height = 40%/> <br> <br>
+                    2. Point Deform to deform detailed geometry to simulation OR for a simple extrusion Vellum Post Process will also work <br>
+                    3. Dampness is an important aspect of Vellum- controls bounciness, balance of stiffness and bend, I found myself playing with the Dampness value the most <br>
+                    4. Timeshift in a for each loop containing a copy to points offsets the animation for every leaf bud- This will happen before the vellum simulation has run <br>
+                </h4>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/o8x6VcviDpo?si=ZfsBvcGH3d0j367l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h4>
+                    5. Combination of Layered simulations and hand animating has gotten me to the closest result this quarter <br>
+                    6. Without concerning about growing from the bud, PDG worked very well with Vellum Vine tests to create variations of vines with different curves and number of leaves <br>
+                    <img src="./images/realtimePlantGrowth/summaryOfQuarter/vellumpdgvariations.png" alt="pdg" width=50% height = 50%/> <br> <br>
+                    7. You can disable points so that they won't be affected by the Vellum and therefore will not contribute to clipping
+                    <img src="./images/realtimePlantGrowth/summaryOfQuarter/disableVellumSS.png" alt="disableVellum" width=35% height = 35%/> <br> <br>
+                </h4>
+                <div class="spacer"></div>
+                <h6>
+                    Vellum Limitations
+                </h6>
+                <h4>
+                    1. Starting frame has to have some geometry present in order for the vellum sim to work <br>
+                    Solutions: Set Simulation Start Frame to after geometry shows up, Delete based on Curveu after the simulation is complete <br>
+                </h4>
+                <h4>
+                    2. Shape of vellum geometry because of scale increase in growth <br>
+                    The balance of mesh density based on scale was hard to find without the vellum distorting at some point, however starting from open position and going towards the closed position gave better results rather than starting from the closed position
+                </h4>
+                <h4>
+                    3. Trying to use Feather tool to act as leaves since the tool is built to not intersect <br>
+                    Once the Feather was meshed it would stop behaving like a feather- looking to play around with inside the feather tools to see if some tweaks can edit that
+                </h4>
+                <div class = "youtube">
+                    <iframe width="360" height="360" src="https://www.youtube.com/embed/zFCRo1Y9PoI?si=HaFYSH9kWhQ4vPrm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                </div>
+                <div class="spacer"></div>
+                <h6>
+                    The Stem
+                </h6>
+                <h4>
+                    The biggest issue with the stem was that the branching stems needed to be a solid piece of geometry for subsurface to not cause any artifacting <br>
+                    Attempt 1: Converting ONLY Stems to VDB <br>
+                    Issues: Hard to apply UVS, point count changes per frame, therefore difficult to add Hair OR bring into Unreal as a VAT
+                </h4>
+                <img src="./images/realtimePlantGrowth/summaryOfQuarter/subsurfaceArtifacts.png" alt="subsurface" width=35% height = 35%/> <br> <br>
+                <h4>
+                    Attempt 2: Create branching topology for polyWire <br>
+                    Issues: Point count still changes per frame
+                </h4>
+                <h4>
+                    The stem was also the stiffest part of the plant, so I want to see if I can potentially make it with a Sofy Body sim.
+                </h4>
+                <h4>
+                    The third issue to troubleshoot was for multiple curves to grow according to position rather than the start per curve. <br>
+                    Solution: VEX solution to sort point numbers based on position, and then delete points based on that
+                </h4>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GCqhT7x9gow?si=IFxdKnchqIY00KT8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="spacer"></div>
+                <h6>
+                    Combining Vellum & Gaussian Splats
+                </h6>
+                <h4>
+                    1. Biggest limitation was that Gsplats do not have an alpha which would be the basis of a lot of compositing, Lot of Roto was done to get around this <br>
+                </h4>
+                <img src="./images/realtimePlantGrowth/summaryOfQuarter/gsplat_alpha.png" alt="gsplatAlpha" width=35% height = 35%/> <br> <br>
 
+                <h4>
+                    2. Creating a Gsplat of a 3D object <br>
+                    With GSOPS, there is already a set up for creating a splat with a static mesh, which is essentially a script to take photos of every angle of the mesh <br>
+                    It was unable to recognize animated geo because with each frame the bounding box would change
+                </h4>
+                <div class="spacer"></div>
+                <h6>
+                    Questions Left to Answer
+                </h6>
+                <h4>
+                    1. Is there a more elegant solution to creating the connection between the stem and the leaves <br>
+                    2. For a close up shot, would we get the best results by hand animating? <br>
+                    3. Is it possible to remesh geometry as the simulation is running? <br>
+                    4. For real time, how to optimize without reducing the quality?
+
+                </h4>
+                <div class="spacer" id = "realtime-plant-growth-weekly-blog"></div>
+                <div class="spacer"></div>
+                <h3>
+                    Weekly Blogs
+                </h3>
+                <div>
+                    <a href="./realtimePlantGrowthWeek10.html" class="home-btn">WEEK 10</a>
+                </div>
+                <div>
+                    <a href="./realtimePlantGrowthWeek9.html" class="home-btn">WEEK 9</a>
+                </div>
+                <div>
+                    <a href="./realtimePlantGrowthWeek8.html" class="home-btn">WEEK 8</a>
+                </div>
+                <div>
+                    <a href="./realtimePlantGrowthWeek7.html" class="home-btn">WEEK 7</a>
+                </div>
+                <div>
+                    <a href="./realtimePlantGrowthWeek6.html" class="home-btn">WEEK 6</a>
+                </div>
+                <div>
+                    <a href="./realtimePlantGrowthWeek5.html" class="home-btn">WEEK 5</a>
+                </div>
                 <div>
                     <a href="./realtimePlantGrowthWeek4.html" class="home-btn">WEEK 4</a>
                 </div>
