@@ -446,6 +446,13 @@ h6{ /*blog header*/
 }
 
 
+.particleDisintegration {
+    background-image: url("./images/particleDisintegration/ParticleDisintegration_COVER.png");
+}
+.particleDisintegration:hover {
+    background-image: url("./images/particleDisintegration/ParticleDisintegration_Frame180.png");
+}
+
 .process-btn {
     display: inline-flex;
     justify-content: center;
