@@ -90,9 +90,9 @@
                     </h6>
                     <h4>
                         The simulations that will be tacked based on this reference are: <br>
-                        1. Egg white flip sim <br>
-                        2. Yolk flip sim <br>
-                        3. Oil in pan flip <br>
+                        1. Egg white sim <br>
+                        2. Yolk sim <br>
+                        3. Oil sim <br>
                         4. Pyro for egg bubbling <br>
                         5. Pyro for steam <br>
                         6. (Stretch goal: Black pepper/green onion sprinkled)
@@ -100,6 +100,44 @@
                         <br>
                         The main focus however will be on the egg whites and yolk simulation. 
                     </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        Which Simulation to Use?
+                    </h6>
+                    <h4>
+                        I researched both FLIP and MPM simulations to see which one would work best with what I want to simulate
+                    </h4>
+                    <h4>
+                        I ended up choosing to use MPM as it can handle multiple types and the mixing of the materials at the same time. Since I need 3 separate materials: egg white, yolk, and oil, this seemed to be the best option. 
+                    </h4>
+                    <h4>
+                        I started watching the MPM Fundamentals video from the Houdini youtube channel to learn how to set up my simulation. This video went over how to set up different materials, colliders, and where to adjust the material properties and particle separation.  
+                    </h4>
+                    <img src="./images/sunnySideUp/MPMInitialSetup.png" alt="MPMInitialSetup" width=35% height = 35%/>
+
+                    <div class="spacer"></div>
+                    <h6>
+                        Scale Issue
+                    </h6>
+                    <h4>
+                        I quickly realized that if I used the actual scale of an egg, my particle separation would need to be a very low value. I decided to scale up everything in my scene by 10 so I could plug in bigger values. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        Material R&D
+                    </h6>
+                    <h4>
+                        I created an egg blockout so that I could start creating base materials for each part of my scene. 
+                    </h4>
+                    <img src="./images/sunnySideUp/initialMaterialRND.png" alt="initialMaterialRND" width=35% height = 35%/>
+                    <div class="spacer"></div>
+                    <h6>
+                        Iterations
+                    </h6>
+                    <h4>
+                        I did not get a chance to play with the material properties too much, but here is one of the very first iterations for documentation. 
+                    </h4>
+                    <img src="./images/sunnySideUp/veryfirstiteration.png" alt="veryfirstiteration" width=35% height = 35%/>
 
 
                     
