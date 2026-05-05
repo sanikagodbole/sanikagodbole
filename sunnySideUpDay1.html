@@ -54,27 +54,105 @@
         }
     </script>
 
+    <div class="spacer" id="realtime-plant-growth-blog"></div>
     <div class="spacer"></div>
     <div class="spacer"></div>
-    <div class="spacer"></div>
-    <h1> Sunny Side Up</h1>
+    <h1>Sunny Side Up Blog</h1>
         <div>
             <div class = "centered-div">
-                <h5> Fried Egg Simulation Technical Summary
+                <h5>Fried Egg Simulation Technical Summary
                 </h5>
-                <div class = "youtube">
-                    <iframe src="https://www.youtube.com/embed/aM-Ur78UrZM?si=O_x6N3DbEKWGpV2X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+                
 
-                <div class="spacer"  id="sunnySideUp-blog"></div>
+                <div class="spacer"></div>
+                <div class="spacer"></div>
 
-                <h3>
-                    Detail Blogs
-                </h3>
+
                 <div>
-                    <a href="./sunnySideUpDay2.html" class="home-btn"> Day 2 </a> <br>
-                    <a href="./sunnySideUpDay1.html" class="home-btn"> Day 1 </a>
+                    <h3>
+                        DAY 1 PROGRESS BLOG
+                    </h3>
+                    <h6>
+                        GOAL
+                    </h6>
+                    <h4>
+                        Find Reference & RND
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        REFERENCES
+                    </h6>
+                    <h4>
+                        <iframe width="940" height="560"  src="https://www.youtube.com/embed/aM-Ur78UrZM?si=O_x6N3DbEKWGpV2X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="spacer"></div>
+                    <h6>
+
+                        PROCESS
+                    </h6>
+                    <h4>
+                        The simulations that will be tacked based on this reference are: <br>
+                        1. Egg white sim <br>
+                        2. Yolk sim <br>
+                        3. Oil sim <br>
+                        4. Pyro for egg bubbling <br>
+                        5. Pyro for steam <br>
+                        6. (Super Stretch goal: Black pepper/green onion sprinkled)
+                        <br>
+                        <br>
+                        The main focus however will be on the egg whites and yolk simulation. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        Which Simulation to Use?
+                    </h6>
+                    <h4>
+                        I researched both FLIP and MPM simulations to see which one would work best with what I want to simulate
+                    </h4>
+                    <h4>
+                        I ended up choosing to use MPM as it can handle multiple types and the mixing of the materials at the same time. Since I need 3 separate materials: egg white, yolk, and oil, this seemed to be the best option. 
+                    </h4>
+                    <h4>
+                        I started watching the MPM Fundamentals video from the Houdini youtube channel to learn how to set up my simulation. This video went over how to set up different materials, colliders, and where to adjust the material properties and particle separation.  
+                    </h4>
+                    <img src="./images/sunnySideUp/MPMInitialSetup.png" alt="MPMInitialSetup" width=35% height = 35%/>
+
+                    <div class="spacer"></div>
+                    <h6>
+                        Scale Issue
+                    </h6>
+                    <h4>
+                        I quickly realized that if I used the actual scale of an egg, my particle separation would need to be a very low value. I decided to scale up everything in my scene by 10 so I could plug in bigger values. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        Material R&D
+                    </h6>
+                    <h4>
+                        I created an egg blockout so that I could start creating base materials for each part of my scene. 
+                    </h4>
+                    <img src="./images/sunnySideUp/initialMaterialRND.png" alt="initialMaterialRND" width=35% height = 35%/>
+                    <div class="spacer"></div>
+                    <h6>
+                        Iterations
+                    </h6>
+                    <h4>
+                        I did not get a chance to play with the material properties too much, but here is one of the very first iterations for documentation. 
+                    </h4>
+                    <img src="./images/sunnySideUp/veryfirstiteration.png" alt="veryfirstiteration" width=35% height = 35%/>
+                    <div>
+                        <iframe width="940" height="560"  src="https://www.youtube.com/embed/v6LDfgllI8A?si=xBXcTtn8eILxpQc6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    
+                <div>
+                    <a href="./sunnySideUp.html#sunnySideUp-blog" class="home-btn">BACK</a>
                 </div>
+
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+
+                </div>
+
 
 
 
