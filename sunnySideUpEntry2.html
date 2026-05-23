@@ -70,78 +70,99 @@
 
                 <div>
                     <h3>
-                        ENTRY 1 PROGRESS BLOG
+                        ENTRY 2 PROGRESS BLOG
                     </h3>
                     <h6>
                         GOAL
                     </h6>
                     <h4>
-                        Find Reference & RND
+                        FLIP Tests & Animated Material Development
                     </h4>
                     <div class="spacer"></div>
                     <h6>
                         REFERENCES
                     </h6>
                     <h4>
-                        <iframe width="940" height="560"  src="https://www.youtube.com/embed/aM-Ur78UrZM?si=O_x6N3DbEKWGpV2X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Mk6TjS8ctQE" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
+                            Egg Yolk Tutorial
+                    </a> <br>
+                    <a href="https://www.deborahrfowler.com/HoudiniResources/Overview-KarmaTexAnimated.html" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
+                            Animated Textured Documentation
+                    </a> <br>
                     <div class="spacer"></div>
                     <h6>
-
                         PROCESS
                     </h6>
                     <h4>
-                        The simulations that will be tacked based on this reference are: <br>
-                        1. Egg white sim <br>
-                        2. Yolk sim <br>
-                        3. Oil sim <br>
-                        4. Pyro for egg bubbling <br>
-                        5. Pyro for steam <br>
-                        6. (Super Stretch goal: Black pepper/green onion sprinkled)
+                        After consulting with Professor Fowler, I will be switching to using a FLIP simulation rather than MPM and here is my updated priority list: <br>
+                        1. Egg white & Yolk FLIP Sim (Together) <br>
+                        2. Metaballs for surface deformation <br>
+                        3. Pyro for steam <br>
+                        4. Oil FLIP with Egg Sim as Collider
+                        5. (Super Stretch goal: Black pepper/green onion sprinkled)
                         <br>
-                        <br>
-                        The main focus however will be on the egg whites and yolk simulation. 
                     </h4>
                     <div class="spacer"></div>
                     <h6>
-                        Which Simulation to Use?
+                        INITIAL FLIP TESTS
                     </h6>
                     <h4>
-                        I researched both FLIP and MPM simulations to see which one would work best with what I want to simulate
+                        From what I learned from the MPM Fundamentals video for a couple days ago, I set up my FLIP sources like this. I watched the Egg Yolk tutorial to get an idea of how to adjust different material parameters from the same DOP net. Essentially, you can control based on the pre-existing attributes that come with the FLIP solver. 
                     </h4>
+                    <img src="./images/sunnySideUp/day2/egg_Sources.png" alt="veryfirstiteration" width=20% height = 20%/>
                     <h4>
-                        I ended up choosing to use MPM as it can handle multiple types and the mixing of the materials at the same time. Since I need 3 separate materials: egg white, yolk, and oil, this seemed to be the best option. 
+                        Here is one of my first FLIP tests. I am mainly tweaking the with the density and viscosity attributes to control how much each material spreads. 
                     </h4>
-                    <h4>
-                        I started watching the MPM Fundamentals video from the Houdini youtube channel to learn how to set up my simulation. This video went over how to set up different materials, colliders, and where to adjust the material properties and particle separation.  
-                    </h4>
-                    <img src="./images/sunnySideUp/MPMInitialSetup.png" alt="MPMInitialSetup" width=35% height = 35%/>
-
-                    <div class="spacer"></div>
-                    <h6>
-                        Scale Issue
-                    </h6>
-                    <h4>
-                        I quickly realized that if I used the actual scale of an egg, my particle separation would need to be a very low value. I decided to scale up everything in my scene by 10 so I could plug in bigger values. 
-                    </h4>
-                    <div class="spacer"></div>
-                    <h6>
-                        Material R&D
-                    </h6>
-                    <h4>
-                        I created an egg blockout so that I could start creating base materials for each part of my scene. 
-                    </h4>
-                    <img src="./images/sunnySideUp/initialMaterialRND.png" alt="initialMaterialRND" width=35% height = 35%/>
-                    <div class="spacer"></div>
-                    <h6>
-                        Iterations
-                    </h6>
-                    <h4>
-                        I did not get a chance to play with the material properties too much, but here is one of the very first iterations for documentation. 
-                    </h4>
-                    <img src="./images/sunnySideUp/veryfirstiteration.png" alt="veryfirstiteration" width=35% height = 35%/>
                     <div>
-                        <iframe width="940" height="560"  src="https://www.youtube.com/embed/v6LDfgllI8A?si=xBXcTtn8eILxpQc6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe width="940" height="560" src="https://www.youtube.com/embed/2YMRwA4_6uE?si=hEPeZ9OIc7fD1kXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
+                    <div class="spacer"></div>
+                    <h6>
+                        RESEEDING & DIVERGENCE
+                    </h6>
+                    <h4>
+                        Visible in the video above, the geo slowing starts disappearing as you get further in the simulation. After some research, I learned this is a Reseeding issue. I enabled "Reseed Particles" in the FLIP Solver and increased both the Birth and Death threshholds so that the particles don't die too quickly. Enabling Divergence allowed my simulation to retain it's volume. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        DRIP ISSUE
+                    </h6>
+                    <h4>
+                        One of the immediate issues I see is the shape of the drip before it plops onto the pan. Based on the reference, the whites and yolk are flowing down in a stream rather than the entire egg white and yolk plopping down at once. <br> To solve this, I created another collider to act as the "egg shell" that the whites drop into before pouring into the pan. In this way, I can also judge the viscosity as it drips down. This collider will not be visible in the final render. 
+                    </h4>
+                    <h4>
+                        This video shows the solution of both the Reseeding and the Drip issue:
+                    </h4>
+                    <div>
+                        <iframe width="940" height="560" src="https://www.youtube.com/embed/ezKTsxVnurU?si=7zE7lH1p1NWUKOx5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="spacer"></div>
+                    <h6>
+                        ANIMATED TEXTURE TEST
+                    </h6>
+                    <h4>
+                        I used the Python script from Professor Fowler's documentation to test out animated textures on the farm so I already have it set up for later. Here is the test render:
+                    </h4>
+                    <div>
+                        <iframe width="940" height="560" src="https://www.youtube.com/embed/_a1ZBfjl7J8?si=_7SgHFXkiNlhipk6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="spacer"></div>
+                    <h6>
+                        FURTHER FLIP TESTS
+                    </h6>
+                    <h4>
+                        I am playing with the viscosity and density values to try to find the right balance. I think the yolk is closer, the white is still gross looking, it is too flowing and has to just "plop"
+                    </h4>
+                    <div>
+                        <iframe width="940" height="560" src="https://www.youtube.com/embed/fWu0U2pUqhI?si=utM0CmiQ38lXp23R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h4>
+                        Trying different ways to make the fluid flow.
+                    </h4>
+                    <div>
+                        <iframe width="940" height="560" src="https://www.youtube.com/embed/CD_xenlecRo?si=bjpyhiqwb2uemEbV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
 
                     
                 <div>
