@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
@@ -7,7 +9,7 @@
 }
 body{
     min-height: 100vh;
-    background-color: #2a2d2a; /*can replace with image*/
+    background-color: hsl(120, 5%, 10%); /*can replace with image*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -38,7 +40,7 @@ nav a{
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: #bacaa1;
+    color: #ddecc5;
 }
 nav li:first-child{
     margin-right: auto;
@@ -49,7 +51,7 @@ nav a:hover{
 }
 /* Ensure any SVGs inside the sidebar use the same link color */
 .sidebar svg {
-    fill: #bacaa1;
+    fill: #ddecc5;
 }
 
 /* If you want the SVG to change on hover like the link text, uncomment the rule below */
@@ -116,7 +118,7 @@ nav a:hover{
 
 .centered-div {
     text-align: center;
-    color: #bacaa1;
+    color: #ddecc5;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: lighter;
     font-size: 20px;
@@ -133,9 +135,9 @@ nav a:hover{
 
 h1{ /*title*/
     text-align: center;
-    color: #bacaa1;
-    font-family: 'Oswald', serif;
-    font-size: 60px;}
+    color: #ddecc5;
+    font-family: 'Alumni Sans', serif;
+    font-size: 80px;}
 @media(max-width: 600px){
     h1 {
         font-size: 50px;
@@ -144,7 +146,7 @@ h1{ /*title*/
 
 h2{ /*subtitle*/
     text-align: center;
-    color: #bacaa1;
+    color: #ddecc5;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: lighter;
     font-size: 20px;
@@ -159,7 +161,7 @@ h2{ /*subtitle*/
 
 h3{ /*header*/
   text-align: center;
-  color: #bacaa1;
+  color: #ddecc5;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -173,7 +175,7 @@ h3{ /*header*/
 
 p{ /*paragraph*/
   text-align: center;
-  color: #bacaa1;
+  color: #ddecc5;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: lighter;
   font-size: 18px;
@@ -187,7 +189,7 @@ p{ /*paragraph*/
 
 h4{ /*side explanation*/
   text-align: left;
-  color: #bacaa1;
+  color: #ddecc5;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: lighter;
   font-size: 18px;
@@ -201,7 +203,7 @@ h4{ /*side explanation*/
 
 h5{ /*center explanation*/
   text-align: center;
-  color: #bacaa1;
+  color: #ddecc5;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: lighter;
   font-size: 18px;
@@ -216,7 +218,7 @@ h5{ /*center explanation*/
 
 h6{ /*blog header*/
   text-align: left;
-  color: #bacaa1;
+  color: #ddecc5;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 700px;
   font-size: 18px;
@@ -283,7 +285,7 @@ h6{ /*blog header*/
     align-items: center;
     width: 150px;
     height: 50px;
-    background-color: #bacaa1;
+    background-color: #ddecc5;
     color: #2a2b2d;
     font-family: 'Oswald', serif;
     font-weight: normal;
@@ -459,7 +461,7 @@ h6{ /*blog header*/
     align-items: center;
     width: 300px;
     height: 50px;
-    background-color: #bacaa1;
+    background-color: #ddecc5;
     color: #2a2b2d;
     font-family: 'Oswald', serif;
     font-weight: normal;
