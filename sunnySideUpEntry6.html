@@ -54,31 +54,107 @@
         }
     </script>
 
+    <div class="spacer" id="realtime-plant-growth-blog"></div>
     <div class="spacer"></div>
     <div class="spacer"></div>
-    <div class="spacer"></div>
-    <h1> Sunny Side Up</h1>
+    <h1>Sunny Side Up Blog</h1>
         <div>
             <div class = "centered-div">
-                <h5> Fried Egg Simulation Technical Summary
+                <h5>Fried Egg Simulation Technical Summary
                 </h5>
-                <div class = "youtube">
-                    <iframe src="https://www.youtube.com/embed/aM-Ur78UrZM?si=O_x6N3DbEKWGpV2X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+                
 
-                <div class="spacer"  id="sunnySideUp-blog"></div>
+                <div class="spacer"></div>
+                <div class="spacer"></div>
 
-                <h3>
-                    Detail Blogs
-                </h3>
+
                 <div>
-                    <a href="./sunnySideUpEntry6.html" class="home-btn"> Entry 6 </a> <br>
-                    <a href="./sunnySideUpEntry5.html" class="home-btn"> Entry 5 </a> <br>
-                    <a href="./sunnySideUpEntry4.html" class="home-btn"> Entry 4 </a> <br>
-                    <a href="./sunnySideUpEntry3.html" class="home-btn"> Entry 3 </a> <br>
-                    <a href="./sunnySideUpEntry2.html" class="home-btn"> Entry 2 </a> <br>
-                    <a href="./sunnySideUpEntry1.html" class="home-btn"> Entry 1 </a>
+                    <h3>
+                        ENTRY 6 PROGRESS BLOG
+                    </h3>
+                    <h6>
+                        GOAL
+                    </h6>
+                    <h4>
+                        Steam, Bubbles, Material Transition
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        FLIP ADJUSTMENTS
+                    </h6>
+                    <h4>
+                        I added a slight movement to the collider that the egg is falling from to simulate a hand held crack. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        MATERIAL TRANSITION
+                    </h6> 
+                    <h4>
+                        Uncooked Egg: All Transmission, Coat <br>
+                        Cooked Egg: Transmission only around yolk, Subsurface for everything else <br>
+                    </h4>
+                    <h4>
+                        I rendered a white to black transition image sequence to plug into transmission and coat to get the material transition.
+                    </h4>
+                    <h4>
+                        For the material variation, I created a thickness attribute in SOP level to differentiate the bubbles, the white surrounding the egg and everything else. This allowed me to have different transmissiona and subsurface values for the different elements. 
+                    </h4>
+                    <h4>
+                        The transition between the yolk and white is seamless in the reference so I used the same thickness attribute for the transmission and plugged it into opacity.
+                    </h4>
+                    <h4>
+                        Here is my mask based on the thickness attribute:
+                    </h4>
+                    <img src="./images/sunnySideUp/day6/thickness_attribute.png" alt="thickness" width=30% height = 30%/>
+                    <h4>
+                        Here is my Egg White material node network:
+                    </h4>
+                    <img src="./images/sunnySideUp/day6/eggwhite_material_transition.png" alt="egg_white_material" width=50% height = 50%/>
+                    <h4>
+                        There are still some issues with this network as I was trying to animate the thickness values in SOP level and while it is being animated, there is still adjustment needing to be done. In the test render, you can see the opacity suddenly appear on. 
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        MATERIAL LIBRARY CORRUPTING
+                    </h6>
+                    <h4>
+                        Multiple times my material library node would get corrupted and cause my file to crash. Not sure why, it would fix when I deleted the node and remade it, however it was happening way too many times. Not sure if it is because my material network is a little more involved than usual.
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        STEAM & COMP
+                    </h6>
+                    <h4>
+                        I created holdouts of the egg and rendered my steam separately so I can comp it on top. I want to add separate AOVs for transmission and the stove light next time I render so I can denoise and add fire flicker accordingly.
+                    </h4>
+                    <div class="spacer"></div>
+                    <h6>
+                        LATEST TEST RENDER
+                    </h6>
+                    <div>
+
+                    </div>
+                    <div class="spacer"></div>
+                    <h6>
+                        TO DO
+                    </h6>
+                    <h4>
+                        1. Fix the sudden opacity transition <br>
+
+                    </h4>
+
+
+
+                    
+                <div>
+                    <a href="./sunnySideUp.html#sunnySideUp-blog" class="home-btn">BACK</a>
                 </div>
+
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+
+                </div>
+
 
 
 
